@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" href="data:,">
+    <title>Text Formatter & Cleaner</title>
+
+    <!-- Bootstrap 5 (CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+
+<div class="container py-4">
+    <div class="row mb-3">
+        <div class="col">
+            <h1 class="h3 text-center">Text Formatter & Cleaner</h1>
+            <p class="text-center text-muted small mb-0">Quick tools for cleaning, formatting and exporting text.</p>
+        </div>
+    </div>
+
+    <div class="row g-3">
+        <div class="col-12">
+            <label for="inputText" class="form-label">Input (paste here)</label>
+            <textarea id="inputText" class="form-control" rows="8" placeholder="Paste your text..."></textarea>
+            <div class="form-text" id="inputStats">Words: 0 • Chars: 0</div>
+        </div>
+
+        <div class="col-12">
+            <div class="btn-toolbar flex-wrap" role="toolbar" aria-label="Actions">
+                <div class="btn-toolbar flex-wrap" role="toolbar" aria-label="Actions">
+    <div class="btn-group me-2 mb-2" role="group">
+        <button class="btn btn-primary" onclick="cleanText()">Clean Text</button>
+        <button class="btn btn-secondary" onclick="toUpperCaseText()">UPPER</button>
+        <button class="btn btn-secondary" onclick="toLowerCaseText()">lower</button>
+        <button class="btn btn-secondary" onclick="toTitleCase()">Title Case</button>
+    </div>
+
+    <div class="btn-group me-2 mb-2" role="group">
+        <button class="btn btn-warning" onclick="removeDuplicateLines()">Remove Duplicates</button>
+        <button class="btn btn-info" onclick="sortLines()">Sort Lines</button>
+        <button class="btn btn-outline-danger" onclick="removeBlankLines()">Remove Blank Lines</button>
+    </div>
+
+    <div class="btn-group me-2 mb-2" role="group">
+        <button class="btn btn-dark" onclick="removeHtmlTags()">Strip HTML</button>
+        <button class="btn btn-dark" onclick="removeNonPrintable()">Remove Non-printable</button>
+        <button class="btn btn-dark" onclick="normalizeSpaces()">Normalize Spaces</button>
+    </div>
+
+    <div class="btn-group me-2 mb-2" role="group">
+        <button class="btn btn-success" onclick="copyText()">Copy</button>
+        <button class="btn btn-outline-success" onclick="downloadText()">Download .txt</button>
+    </div>
+
+    <div class="btn-group mb-2" role="group">
+        <button class="btn btn-outline-secondary" onclick="swapInputOutput()">Swap In⇄Out</button>
+        <button class="btn btn-outline-danger" onclick="resetAll()">Clear All</button>
+    </div>
+</div>
+
+            </div>
+            <div class="form-check form-check-inline mt-2">
+                <input class="form-check-input" type="checkbox" id="applyToOutput" checked>
+                <label class="form-check-label" for="applyToOutput">Apply operations to Output if present</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="removeAccents">
+                <label class="form-check-label" for="removeAccents">Remove accents (diacritics)</label>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <label for="outputText" class="form-label">Output (editable)</label>
+            <textarea id="outputText" class="form-control" rows="8" placeholder="Result will appear here..."></textarea>
+            <div class="form-text" id="outputStats">Words: 0 • Chars: 0</div>
+        </div>
+    </div>
+
+    <footer class="mt-4 text-center text-muted small">
+        Built with PHP, Bootstrap & plain JS — expand as you like. Need a feature? Ask and we'll add it.
+    </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
