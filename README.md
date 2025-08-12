@@ -1,51 +1,41 @@
-# Text Cleaner & Formatter
+# Text Formatter & Cleaner
 
-A simple and mobile-friendly web app for cleaning, formatting, and exporting text.  
-Live version: **[Text Cleaner](https://odsantos.github.io/text-cleaner/)**
+A lightweight, browser-based text formatting tool to quickly clean, format, and export text.  
+Built with **Bootstrap** and **plain JavaScript**, no dependencies required.
 
----
+## Features
 
-## ✨ Features
+- Clean unwanted spaces and blank lines
+- Convert to UPPER, lower, or Title Case
+- Remove duplicate lines
+- Sort lines alphabetically
+- Strip HTML tags
+- Remove non-printable characters
+- Normalize spaces
+- Optional: remove accents (diacritics)
+- Copy results to clipboard
+- Download results as `.txt`
+- Swap Input/Output
+- Clear all text
 
-- **Clean Text** — remove unwanted characters, extra spaces, and tidy up text.
-- **Change Case** — convert to UPPERCASE, lowercase, or Title Case.
-- **Remove Duplicates** — delete duplicate lines automatically.
-- **Sort Lines** — alphabetically sort text line-by-line.
-- **Remove Blank Lines** — clear out empty lines.
-- **Strip HTML** — remove HTML tags from pasted content.
-- **Remove Non-printable** — clean out hidden/non-printable characters.
-- **Normalize Spaces** — fix multiple spaces, tabs, etc.
-- **Remove Accents** — optional diacritics remover.
-- **Copy to Clipboard** — instantly copy results.
-- **Download as .txt** — save output to a text file.
-- **Swap Input/Output** — quickly move output back into input.
-- **Clear All** — reset everything with one click.
+## Live Demo
 
----
+🔗 **[Try it here](https://odsantos.github.io/text-cleaner/)**
 
-## 📱 Mobile Friendly
+## How to Run Locally
 
-The app uses **Bootstrap 5** for a responsive design that works well on both desktop and mobile devices.
+1. **Download the project**
+   - Click the green **Code** button on the repo page.
+   - Select **Download ZIP**.
+   - Extract the ZIP to any folder on your computer.
 
----
+2. **Open the tool**
+   - Open the extracted folder.
+   - Double-click `index.html` — it will open in your default browser.
 
-## 🚀 Usage
+3. **Use it offline**
+   - The tool works fully offline — no installation or internet connection needed.
 
-1. Paste your text into the **Input** box.
-2. Choose an action (e.g., `Clean Text`, `UPPER`, `Remove Duplicates`).
-3. See results in the **Output** box.
-4. Optionally copy or download the cleaned text.
+## License
 
----
-
-## 🛠 Technologies
-
-- **HTML5**
-- **CSS3** (Bootstrap 5)
-- **JavaScript** (Vanilla JS)
-
----
-
-## 📄 License
-
-This project is open-source and free to use.
+This project is open-source under the [MIT License](LICENSE).
