@@ -218,6 +218,34 @@ function updateStats() {
     document.getElementById('outputStats').textContent = `Words: ${countWords(output)} • Chars: ${output.length}`;
 }
 
+// ===== Theme Toggle =====
+const themeToggle = document.getElementById('themeToggle');
+
+// Get saved theme or default to light
+const savedTheme = localStorage.getItem('theme') || 'theme-light';
+document.body.classList.add(savedTheme);
+updateThemeButtonText(savedTheme);
+
+// Toggle theme on click
+themeToggle.addEventListener('click', () => {
+    const newTheme = document.body.classList.contains('theme-light') ? 'theme-dark' : 'theme-light';
+
+    // Remove both classes, then add new one
+    document.body.classList.remove('theme-light', 'theme-dark');
+    document.body.classList.add(newTheme);
+
+    // Save choice
+    localStorage.setItem('theme', newTheme);
+
+    // Update button text
+    updateThemeButtonText(newTheme);
+});
+
+// Update button label
+function updateThemeButtonText(theme) {
+    themeToggle.textContent = theme === 'theme-light' ? '🌙 Dark' : '☀️ Light';
+}
+
 // update stats live
 document.getElementById('inputText').addEventListener('input', updateStats);
 document.getElementById('outputText').addEventListener('input', updateStats);
