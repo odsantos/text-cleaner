@@ -1,5 +1,64 @@
-/* Simple styles — monospace output, subtle card look */
-body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
-textarea { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace; font-size: 0.95rem; }
-.btn { min-width: 90px; }
-.container { max-width: 900px; }
+/* ===== Theme Styles ===== */
+
+/* Light Theme */
+.theme-light {
+  --bs-body-bg: #f4f4f4;
+  --bs-body-color: #212529;
+  background-color: var(--bs-body-bg) !important;
+  color: var(--bs-body-color) !important;
+}
+
+/* Dark Theme */
+.theme-dark {
+  --bs-body-bg: #121212;
+  --bs-body-color: #e0e0e0;
+  background-color: var(--bs-body-bg) !important;
+  color: var(--bs-body-color) !important;
+}
+
+/* Textareas */
+.theme-light textarea {
+  background-color: #ffffff;
+  color: #212529;
+}
+.theme-dark textarea {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+  border: 1px solid #444;
+}
+
+/* Fix muted and footer text */
+.theme-dark .text-muted,
+.theme-dark footer,
+.theme-dark .form-text {
+  color: #ccc !important;
+}
+
+/* Placeholder text */
+.theme-dark textarea::placeholder,
+.theme-dark input::placeholder {
+  color: #aaa !important;
+}
+
+/* Outline buttons in dark mode */
+.theme-dark .btn-outline-secondary,
+.theme-dark .btn-outline-danger,
+.theme-dark .btn-outline-success {
+  color: #f8f9fa !important;
+  border-color: #888 !important;
+}
+.theme-dark .btn-outline-secondary:hover,
+.theme-dark .btn-outline-danger:hover,
+.theme-dark .btn-outline-success:hover {
+  background-color: #333 !important;
+  color: #fff !important;
+}
+
+/* Make primary, warning, etc. still pop */
+.theme-dark .btn-primary { background-color: #0d6efd; border-color: #0d6efd; }
+.theme-dark .btn-warning { background-color: #ffc107; border-color: #ffc107; color: #000; }
+.theme-dark .btn-info    { background-color: #0dcaf0; border-color: #0dcaf0; color: #000; }
+.theme-dark .btn-dark    { background-color: #343a40; border-color: #343a40; }
+
+/* Theme toggle cursor */
+#themeToggle { cursor: pointer; }
